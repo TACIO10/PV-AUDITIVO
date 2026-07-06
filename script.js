@@ -16,20 +16,3 @@ document.querySelectorAll(".faq details").forEach((item) => {
     });
   });
 });
-
-const proofGrid = document.querySelector(".proof-grid");
-const proofNext = document.querySelector(".proof-next");
-
-if (proofGrid && proofNext) {
-  proofNext.addEventListener("click", () => {
-    const slide = proofGrid.querySelector("figure");
-    const gap = 11;
-    const step = slide ? slide.getBoundingClientRect().width + gap : proofGrid.clientWidth;
-    const atEnd = proofGrid.scrollLeft + proofGrid.clientWidth >= proofGrid.scrollWidth - 8;
-
-    proofGrid.scrollTo({
-      left: atEnd ? 0 : proofGrid.scrollLeft + step,
-      behavior: "smooth"
-    });
-  });
-}
