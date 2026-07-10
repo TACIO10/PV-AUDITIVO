@@ -31,6 +31,13 @@ h1 em, h2 em { color: var(--green); font-style: normal; }
 .proof-bar { padding: 12px 18px; color: var(--white); background: #0b332b; border-top: 3px solid var(--lime); font-family: "Manrope", sans-serif; font-size: .9rem; font-weight: 800; letter-spacing: .025em; text-align: center; text-transform: uppercase; }
 .proof-bar strong { color: var(--lime); }
 
+.first-proof { padding: 78px 0 88px; color: var(--white); background: #061310; }
+.first-proof__heading { max-width: 920px; margin-bottom: 34px; }
+.first-proof__heading h2 { color: var(--white); }
+.first-proof__grid { display: grid; grid-template-columns: .82fr 1.18fr 1.18fr; gap: 18px; align-items: center; }
+.first-proof__grid figure { overflow: hidden; margin: 0; background: #101816; border: 1px solid rgba(255,255,255,.12); border-radius: 18px; box-shadow: 0 20px 60px rgba(0,0,0,.28); }
+.first-proof__grid img { width: 100%; height: auto; object-fit: contain; }
+
 .topbar { position: absolute; z-index: 10; top: 0; left: 0; width: 100%; color: var(--white); }
 .topbar__inner { display: flex; align-items: center; justify-content: space-between; height: 84px; border-bottom: 1px solid rgba(255,255,255,.12); }
 .brand { display: inline-flex; gap: 10px; align-items: center; font-family: "Manrope", sans-serif; font-weight: 800; }
@@ -219,6 +226,12 @@ footer { padding: 34px 0; color: #91a59f; background: #051310; }
 @media (max-width: 640px) {
   body { font-size: .94rem; }
   .proof-bar { padding: 9px 10px; border-top-width: 2px; font-size: .7rem; letter-spacing: 0; }
+  .first-proof { padding: 44px 0 50px; }
+  .first-proof__heading { margin-bottom: 22px; }
+  .first-proof__heading h2 { font-size: clamp(1.55rem, 7vw, 2rem); }
+  .first-proof__grid { grid-template-columns: 1fr; gap: 12px; }
+  .first-proof__grid figure { border-radius: 14px; }
+
   .container, .narrow { width: min(100% - 24px, 1160px); }
   .topbar__inner { height: 58px; }
   .brand { font-size: .86rem; }
